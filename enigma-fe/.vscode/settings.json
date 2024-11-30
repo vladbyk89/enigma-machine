@@ -1,0 +1,18 @@
+{
+	"cSpell.words": [
+		"Bivariate",
+		"Downsampling",
+		"Msal",
+		"Plotly",
+		"protobuf",
+		"ungated"
+	],
+	// Editor settings
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	// Prettier settings
+	"prettier.tabWidth": 4,
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleQuote": true,
+	"prettier.useTabs": true
+}
