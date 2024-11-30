@@ -1,0 +1,31 @@
+.rotorsContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  &__rotorsArea {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    .resetBtn{
+      padding: 0.5rem 1rem;
+      font-size: .5rem;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background-color: #f1f1f1;
+      &:hover {
+        background-color: #e1e1e1;
+      }
+    }
+    app-rotor-item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

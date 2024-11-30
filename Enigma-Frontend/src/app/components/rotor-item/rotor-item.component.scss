@@ -1,0 +1,25 @@
+.rotor {
+  cursor: pointer;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #eee;
+  border-radius: 10%;
+  h5 {
+    color: black;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: .5rem;
+  }
+  p {
+    padding: .3rem;
+    font-size: 0.6rem;
+    text-align: center;
+    color: #494949;
+  }
+}

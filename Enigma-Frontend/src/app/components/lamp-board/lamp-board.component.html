@@ -1,0 +1,7 @@
+<div class="keyboard">
+  <div *ngFor="let row of rows" class="keyboard-row">
+    <div *ngFor="let key of row" class="key" [class.active]="key == lampStatus">
+      {{ key }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<!-- enigma-start.component.html -->
+
+<form
+  *ngIf="availableRotors.length > 0"
+  class="enigma-start"
+  #form="ngForm"
+  (ngSubmit)="startEnigma()"
+>
+  <h1>Welcome to the Enigma Machine</h1>
+  <p>Configure your Enigma machine settings:</p>
+
+  <div class="setup-options">
+
+    <label for="rotor-selection">Select 3 Rotors:</label>
+    <app-select-rotor
+      *ngFor="let rotor of dataFields; let ii = index"
+      [availableRotors]="availableRotors"
+      [formData]="formData"
+      [rotorName]="rotor"
+      [rotorNumber]="ii + 1"
+    ></app-select-rotor>
+
+    <label for="reflector-selection">Select Reflector:</label>
+    <select id="reflector" name="reflector" [(ngModel)]="formData.reflector">
+      <option *ngFor="let reflector of reflectorNames" [value]="reflector">
+        {{ reflector }}
+      </option>
+    </select>
+
+    <label for="plugboard-setting">Plugboard Setting:</label>
+    <input
+      id="plugboard-setting"
+      type="text"
+      name="plugboard-setting"
+      [(ngModel)]="formData.plugboard"
+      (ngModelChange)="onPlugboardChange($event)"
+    />
+
+    <!-- Add more configuration options as needed -->
+
+    <button type="submit">Start Enigma</button>
+  </div>
+  <b style="color: brown">{{ errorMessage }}</b>
+</form>
+
+<app-loader [isLoading]="isLoading"></app-loader>
+
+<div
+  class="enigma-start__error"
+  *ngIf="!isLoading && availableRotors.length == 0"
+>
+  <h1>Data was not retrieved properly from db.</h1>
+  <h3>Please refresh page and try again.</h3>
+  <p>If error consists please contact us to check API conection</p>
+</div>

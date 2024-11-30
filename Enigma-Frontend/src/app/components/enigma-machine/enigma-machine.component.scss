@@ -1,0 +1,12 @@
+.machineContainer {
+  flex: 1;
+  display: grid;
+  grid-template-rows: 2fr 3fr 3fr 4fr;
+  padding: .5rem;
+  gap: 1rem;
+  background-color: #928b8b;
+  color: white;
+  .section{
+    display: flex;
+  }
+}

@@ -1,0 +1,11 @@
+<section class="rotorsContainer">
+  <p class="rotorsContainer__text">
+  </p>
+  <div class="rotorsContainer__rotorsArea">
+    <app-rotor-item
+      *ngFor="let rotor of rotors"
+      [rotor]="rotor"
+      (onRotateTask)="rotate(rotor)"
+    ></app-rotor-item>
+  </div>
+</section>

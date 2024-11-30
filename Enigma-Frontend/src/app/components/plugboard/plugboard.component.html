@@ -1,0 +1,11 @@
+<div class="keyboard">
+  <div *ngFor="let row of plugboardRows" class="keyboard-row">
+    <div *ngFor="let key of row" class="col">
+      <span>{{ key.key }}</span>
+      <div
+        class="key"
+        [ngStyle]="{ 'background-color': key.color}"
+      ></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="rotor" (click)="onRotate(rotor)">
+  <p>{{ rotor.wiring[(rotor.position + 1) % 26] }}</p>
+  <h5>{{ rotor.wiring[rotor.position] }}</h5>
+  <p>
+    {{ rotor.wiring[(rotor.position - 1 + 26) % 26] }}
+  </p>
+</div>

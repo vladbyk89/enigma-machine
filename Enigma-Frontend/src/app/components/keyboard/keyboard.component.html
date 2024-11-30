@@ -1,0 +1,12 @@
+<div class="keyboard">
+  <div *ngFor="let row of rows" class="keyboard-row">
+    <div
+      *ngFor="let key of row"
+      class="key"
+      [class.resizing]="pressedKey === key"
+      (click)="onKeyPress(key)"
+    >
+      <span>{{ key }}</span>
+    </div>
+  </div>
+</div>

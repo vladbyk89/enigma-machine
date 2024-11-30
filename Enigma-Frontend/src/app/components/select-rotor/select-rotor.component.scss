@@ -1,0 +1,26 @@
+.rotor-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  label:first-child {
+    min-width: 5rem;
+  }
+  label {
+    font-size: .9em;
+  }
+}
+
+label {
+  font-size: 1.2em;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}

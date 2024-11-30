@@ -1,0 +1,47 @@
+<div class="rotor-select" id="rightRotorSelect">
+  <label [for]="rotorName"
+    >{{
+      rotorNumber +
+        (rotorNumber === 1 ? "st" : rotorNumber === 2 ? "nd" : "rd") +
+        " Rotor"
+    }}
+  </label>
+  <select
+    [id]="rotorName"
+    [name]="rotorName"
+    [(ngModel)]="formData[rotorName].wiring"
+  >
+    <option
+      *ngFor="let rotor of availableRotors; let ii = index"
+      [value]="rotor.wiring"
+    >
+      Rotor {{ ii + 1 }}
+    </option>
+  </select>
+  <label [for]="rotorName + 'Position'">Position</label>
+  <select
+    [id]="rotorName + 'Position'"
+    [name]="rotorName + 'Position'"
+    [(ngModel)]="formData[rotorName].position"
+  >
+    <option
+      *ngFor="let num of availableRotors[0].wiring.split(''); let ii = index"
+      [value]="ii"
+    >
+      {{ ii + 1 }}
+    </option>
+  </select>
+  <label [for]="rotorName + 'Notch'">Notch</label>
+  <select
+    [id]="rotorName + 'Notch'"
+    [name]="rotorName + 'Notch'"
+    [(ngModel)]="formData[rotorName].notch"
+  >
+    <option
+      *ngFor="let num of availableRotors[0].wiring.split(''); let ii = index"
+      [value]="ii"
+    >
+      {{ ii + 1 }}
+    </option>
+  </select>
+</div>
